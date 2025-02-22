@@ -1,0 +1,408 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: white;
+  background-color: black;
+}
+
+.navbar {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-bottom: 100px;
+}
+
+.navbar ul {
+  font-size: 20px;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.navbar ul a{
+  color: white;
+  text-decoration: none;
+}
+.hero {
+  /* height: 500px; */
+  display: flex;
+  margin: 30px 50px;
+  justify-content: space-evenly;
+  gap: 50px;
+
+}
+
+.hero-content {
+  flex-basis: 60%;
+  padding-top: 70px;
+  padding-right: 20px;
+  /* border: 2px solid white; */
+}
+
+.hero-content h1 {
+  font-size: 70px;
+  font-family: sans-serif;
+  line-height: 86px;
+
+}
+
+.hero-content p {
+  margin-top: 30px;
+  font-size: 17px;
+  font-family: sans-serif;
+  color: rgba(255, 255, 255, 0.732);
+
+}
+
+.first-line {
+
+
+  background: linear-gradient(45deg, #c412ac, #fb3939, #eb7df1);
+  /* Pink gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* font-size: 24px;  */
+  font-weight: bold;
+
+
+}
+
+.hero-pic {
+  border-radius: 10px;
+  flex-basis: 40%;
+  background-image: url("https://wallpapers.com/images/hd/sigma-male-profilein-shadow-jpg-0rxv64sn8ffb3isp.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  box-shadow: 0 0 10px pink, 0 0 20px violet, 0 0 30px lightblue;
+  animation: glowEffect 2s infinite alternate;
+}
+
+@keyframes glowEffect {
+  0% {
+    box-shadow: 0 0 3px rgb(251, 43, 119), 0 0 4px rgb(250, 75, 212), 0 0 5px lightblue;
+  }
+
+  50% {
+    box-shadow: 0 0 6px rgb(108, 126, 248), 0 0 7px violet, 0 0 6px rgb(252, 18, 18);
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgb(246, 49, 78), 0 0 10px rgb(242, 93, 19), 0 0 10px lightblue;
+  }
+}
+
+.btn {
+  background-color: hotpink;
+  display: flex;
+  font-family: sans-serif;
+  font-size: 17px;
+  justify-content: space-between;
+  /* Ensures content is centered horizontally */
+  align-items: center;
+  /* Centers content vertically */
+  margin-top: 30px;
+  gap: 10px;
+  width: 240px;
+  height: 64px;
+  border-radius: 35px;
+  /* For more rounded edges */
+  padding-left: 30px;
+  padding-right: 3px;
+}
+
+.btn-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  /* Set a size for the circle */
+  height: 60px;
+  /* Set a size for the circle */
+  border-radius: 50%;
+  /* Makes the button circular */
+  background-color: white;
+}
+
+.btn-arrow span {
+  font-size: 20px;
+  /* You can adjust the font size */
+  color: black;
+}
+
+.services-section {
+  margin: 200px 10px 130px 40px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom:120px ;
+  border-bottom: 2px solid #504242;
+
+}
+
+
+.services-section h1 {
+  font-size: 70px;
+}
+
+.services-section span {
+  background: linear-gradient(45deg, #c412ac, #fb3939, #eb7df1);
+  /* Pink gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* font-size: 24px;  */
+  font-weight: bold;
+
+
+}
+
+.services-section p {
+  font-size: 20px;
+  /* text-align: center; */
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 32px;
+}
+
+
+
+.service-outer-div {
+  width: 80%;
+  overflow-x: auto;
+  max-width: 1000px;
+  margin-top: 65px;
+  display: flex;
+  flex-direction: row; /* Ensure horizontal scrolling */
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  scroll-snap-type: x mandatory;
+  /*scrollbar-width: none;  Hide scrollbar (Firefox) */
+  /*-ms-overflow-style: none;  Hide scrollbar (IE/Edge) */
+  white-space: nowrap; /* Prevent wrapping */
+  padding: 20px 0;
+  padding-left: 10px;
+}
+
+/* .service-outer-div::-webkit-scrollbar {
+   Hide scrollbar for Chrome, Safari 
+    display: none;
+} */
+
+.services {
+  scroll-snap-align: start;
+  background-color: #1F1F1F;
+  height: 250px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center text */
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px; /* Reduce padding to keep content inside */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+  text-align: center;
+  overflow: hidden;
+  white-space: normal; /* Allow text to wrap properly */
+  word-break: break-word; /* Break long words */
+  border: 2px solid transparent; /* Set an initial border */
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+.services:hover {
+  /* transform: scale(1.05);
+  transition: transform 0.3s ease-in-out; */
+  
+  box-shadow: 0 0 3px rgb(216, 5, 223), 0 0 3px rgb(239, 28, 28), 0 0 2px rgb(211, 173, 230);
+
+}
+.services p{
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+
+.client-review{
+  margin: 0px 40px 0 40px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+
+  
+}
+
+
+
+.client-review h1 {
+  font-size: 70px;
+}
+
+.client-review span {
+  background: linear-gradient(45deg, #c412ac, #fb3939, #eb7df1);
+  /* Pink gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+
+
+}
+
+.client-reviews{
+  margin-top: 65px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid  #504242; ;
+  padding-bottom: 120px;
+}
+
+.client-review p {
+  font-size: 20px;
+  /* text-align: center; */
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 32px;
+}
+
+.reviews{
+  background-color: #1F1F1F;
+  height: 250px;
+  border-radius: 12% 0 12% 0;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 50px 27px;
+  font-style: italic;
+  font-weight: normal;
+  color: #e7e7e7;
+}
+
+.reviews:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  
+  box-shadow: 0 0 3px rgb(216, 5, 223), 0 0 3px rgb(239, 28, 28), 0 0 2px rgb(211, 173, 230);
+
+}
+
+/* contact us  */
+.contact-us{
+  margin: 100px 40px 0px 40px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.contact-us h1 {
+  font-size: 70px;
+}
+
+.contact-us span {
+  background: linear-gradient(45deg, #c412ac, #fb3939, #eb7df1);
+  /* Pink gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+
+
+}
+
+
+.inner-contact{
+display: flex;
+gap: 40px;
+margin-top: 65px;
+height: 500px;
+margin-bottom: 100px;
+}
+.contact-box {
+  padding-top: 20px;
+  flex-basis: 40%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  /* gap: 30px; */
+  align-items: center;
+  justify-content: center;
+  border: 1.4px solid white;
+  border-radius: 20px;
+
+
+}
+.input{
+ padding-left: 20px;
+  height: 40px;
+  width: 80%;
+}
+
+#text-area{
+  height: 100px;
+  width: 80%;
+  padding: 10px;
+}
+
+.submit{
+  border-radius: 20px;
+  padding: 10px;
+  height: 40px;
+  width: 80%;
+  border: 2px solid white;
+  text-align: center;
+  cursor: pointer;
+
+}
+.contact-content{
+  margin-top: 40px;
+  flex-basis: 60%;
+  /* border: 2px solid white; */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  
+}
+
+.contact-content h1 {
+  font-size: 40px;
+}
+
+.contact-content span {
+  background: linear-gradient(45deg, #c412ac, #fb3939, #eb7df1);
+  /* Pink gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+
+
+}
